@@ -3,7 +3,7 @@
 ## Local Development
 
 ```bash
-npm install
+cd my-angular-app
 npm start
 ```
 
