@@ -6,13 +6,13 @@ import { ApiService } from '../api.service';
   templateUrl: './child1.component.html',
   styleUrls: ['./child1.component.css'],
 })
-export class Child1Component implements OnInit {
+export class Child1Component {
   title = 'child1';
-  message: string | undefined;
+  message: string = '';
   constructor(private apiService: ApiService) { }
 
-  ngOnInit() {
-    this.apiService.getSomeData().subscribe((data: any) => {
+  sendMessage() {
+    this.apiService.sendMessage('Message from child1 component to app component!').subscribe((data) => {
       this.message = data.message;
     });
   }

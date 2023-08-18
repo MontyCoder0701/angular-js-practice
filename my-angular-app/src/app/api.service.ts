@@ -10,8 +10,11 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getSomeData(): Observable<any> {
+  sendMessage(message: string): Observable<any> {
     const url = `${this.apiUrl}/your-endpoint`;
-    return this.http.get(url);
+    this.http.post(url, { message }).subscribe((data) => {
+      console.log(data);
+    });
+    return this.http.post(url, { message });
   }
 }
