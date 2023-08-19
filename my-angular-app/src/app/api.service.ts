@@ -12,9 +12,6 @@ export class ApiService {
 
   sendMessage(message: string): Observable<any> {
     const url = `${this.apiUrl}/your-endpoint`;
-    this.http.post(url, { message }).subscribe((data) => {
-      console.log(data);
-    });
     return this.http.post(url, { message });
   }
 }
