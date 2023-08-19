@@ -10,9 +10,10 @@ import { NavComponent } from './nav/nav.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { ForgotComponent } from './pages/forgot/forgot.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, RegisterComponent, NavComponent],
+  declarations: [AppComponent, LoginComponent, HomeComponent, RegisterComponent, NavComponent, ForgotComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [{
     provide: HTTP_INTERCEPTORS,
