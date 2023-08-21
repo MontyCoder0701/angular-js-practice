@@ -8,18 +8,18 @@ import { ResetComponent } from './pages/reset/reset.component';
 import { TodoComponent } from './pages/todo/todo.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'forgot', component: ForgotComponent },
-  { path: 'reset/:token', component: ResetComponent },
-  { path: 'todo', component: TodoComponent },
+    { path: '', component: HomeComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'register', component: RegisterComponent },
+    { path: 'forgot', component: ForgotComponent },
+    { path: 'reset/:token', component: ResetComponent },
+    { path: 'todo', component: TodoComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
 
 // The routes array contains all the routes that are used in the app

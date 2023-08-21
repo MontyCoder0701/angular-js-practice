@@ -15,16 +15,33 @@ import { ResetComponent } from './pages/reset/reset.component';
 import { TodoComponent } from './pages/todo/todo.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, RegisterComponent, NavComponent, ForgotComponent, ResetComponent, TodoComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule],
-  providers: [{
-    provide: HTTP_INTERCEPTORS,
-    useClass: AuthInterceptor,
-    multi: true,
-  }],
-  bootstrap: [AppComponent],
+    declarations: [
+        AppComponent,
+        LoginComponent,
+        HomeComponent,
+        RegisterComponent,
+        NavComponent,
+        ForgotComponent,
+        ResetComponent,
+        TodoComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+    ],
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: AuthInterceptor,
+            multi: true,
+        },
+    ],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
 
 // App module contains all the components that are used in the app
 // The imports array contains all the modules that are used in the app
