@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ForgotComponent } from './pages/forgot/forgot.component';
 import { ResetComponent } from './pages/reset/reset.component';
+import { TodoComponent } from './pages/todo/todo.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'forgot', component: ForgotComponent },
   { path: 'reset/:token', component: ResetComponent },
+  { path: 'todo', component: TodoComponent },
 ];
 
 @NgModule({

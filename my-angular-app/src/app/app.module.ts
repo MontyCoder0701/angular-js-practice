@@ -12,9 +12,10 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { ForgotComponent } from './pages/forgot/forgot.component';
 import { ResetComponent } from './pages/reset/reset.component';
+import { TodoComponent } from './pages/todo/todo.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, RegisterComponent, NavComponent, ForgotComponent, ResetComponent],
+  declarations: [AppComponent, LoginComponent, HomeComponent, RegisterComponent, NavComponent, ForgotComponent, ResetComponent, TodoComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [{
     provide: HTTP_INTERCEPTORS,
