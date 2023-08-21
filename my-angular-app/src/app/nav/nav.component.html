@@ -1,15 +1,15 @@
-<header class="p-3 bg-dark text-white">
+<header class="nav-bar">
     <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a routerLink="/" class="nav-link px-2 text-white">Home</a>
+        <div>
+            <a routerLink="/" class="button-white">Home</a>
             <ng-container *ngIf="!authenticated">
-                <a routerLink="/login" class="btn btn-outline-light me-2">Login</a>
+                <a routerLink="/login" class="button-white">Login</a>
             </ng-container>
             <ng-container *ngIf="authenticated">
-                <a routerLink="/login" class="btn btn-outline-light me-2" (click)="logout()">Logout</a>
+                <a routerLink="/login" class="button-white" (click)="logout()">Logout</a>
             </ng-container>
             <ng-container *ngIf="!authenticated">
-                <a routerLink="/register" class="btn btn-outline-light me-2">Register</a>
+                <a routerLink="/register" class="button-white">Register</a>
             </ng-container>
         </div>
     </div>

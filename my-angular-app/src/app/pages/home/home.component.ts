@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Auth } from 'src/app/classes/auth';
+import { Application } from '@splinetool/runtime';
 
 @Component({
     selector: 'app-home',
@@ -9,7 +10,6 @@ import { Auth } from 'src/app/classes/auth';
 })
 export class HomeComponent implements OnInit {
     message = '';
-
     constructor(private http: HttpClient) {}
 
     ngOnInit(): void {
@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
                 Auth.authEmitter.emit(true);
             },
             error: (err) => {
-                this.message = `You are not logged in!`;
+                this.message = `Welcome, Please Log In.`;
                 Auth.authEmitter.emit(false);
             },
         });

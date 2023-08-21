@@ -1,4 +1,19 @@
+body {
+    background-color: black;
+}
+
+.form-title {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2rem;
+}
+
 .form-signin {
+    position : absolute;
+    top: 18%;
+    left: 10%;
     max-width: 330px;
     padding: 1rem;
 }
@@ -7,14 +22,46 @@
     z-index: 2;
 }
 
-.form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+.form-signin input {
+    margin-bottom: 3px;
+    border-radius:3px;
+    background: none;
+    border-color: #b6b6b6;
+    color: white;
 }
 
-.form-signin input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+.form-signin input:focus {
+    background: none;
+    border-color: #ffffff;
+    color: white;
 }
+
+.form-link {
+    color: #b6b6b6;
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding-right: 1rem;
+}
+
+.submit-button {
+    opacity : 0.8;
+    background-color: #727272;
+    border-radius: 4px;
+    margin-top : 1rem;
+    padding: 5px 10px 5px 10px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    color: white;
+    border: none;
+    transition: 0.5s;
+}
+
+.submit-button:hover {
+    transition: 0.5s;
+    opacity : 1;
+}
+
+
