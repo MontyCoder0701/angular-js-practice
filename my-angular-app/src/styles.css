@@ -43,6 +43,10 @@ body {
     padding-right: 1rem;
 }
 
+.form-link:hover {
+    color: #dcdcdc;
+}
+
 .submit-button {
     opacity : 0.8;
     background-color: #727272;

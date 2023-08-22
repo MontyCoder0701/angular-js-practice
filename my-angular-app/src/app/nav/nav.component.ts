@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Auth } from '../classes/auth';
 import { HttpClient } from '@angular/common/http';
+import { Application } from '@splinetool/runtime';
 
 @Component({
     selector: 'app-nav',
@@ -21,5 +22,11 @@ export class NavComponent implements OnInit {
         this.http
             .post('http://localhost:3000/api/logout', {})
             .subscribe(() => {});
+
+        const canvas = document.getElementById('canvas3d') as HTMLCanvasElement;
+        const app = new Application(canvas);
+        app.load(
+            'https://prod.spline.design/yKmotiDVrpmvccOU/scene.splinecode',
+        );
     }
 }

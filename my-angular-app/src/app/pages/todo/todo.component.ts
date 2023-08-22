@@ -29,9 +29,6 @@ export class TodoComponent implements OnInit {
         this.http.get(this.apiUrl).subscribe({
             next: (response) => {
                 this.data = response;
-                this.title = this.data[0].title;
-                this.text = this.data[0].text;
-                this.date = this.data[0].date;
             },
             error: (err) => {
                 console.log('Error:', err);

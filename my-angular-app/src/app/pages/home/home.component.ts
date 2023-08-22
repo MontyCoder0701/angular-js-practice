@@ -10,13 +10,19 @@ import { Application } from '@splinetool/runtime';
 })
 export class HomeComponent implements OnInit {
     message = '';
+    welcome = '';
     constructor(private http: HttpClient) {}
 
     ngOnInit(): void {
         this.http.get('http://localhost:3000/api/user').subscribe({
             next: (res: any) => {
                 this.message = `Hello, ${res.first_name} ${res.last_name}!`;
+                this.welcome = `Let's get started!`;
                 Auth.authEmitter.emit(true);
+                const canvas = document.getElementById(
+                    'canvas3d',
+                ) as HTMLCanvasElement;
+                canvas.remove();
             },
             error: (err) => {
                 this.message = `Welcome, Please Log In.`;

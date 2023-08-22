@@ -1,5 +1,9 @@
-<ng-container *ngIf="authenticated">
-    <p>{{title}}</p>
-    <p>{{text}}</p>
-    <p> {{date}}</p>
-</ng-container>
+<div class="todo-container">
+    <ng-container *ngFor="let item of data">
+        <ng-container *ngIf="authenticated">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.text }}</p>
+            <p>{{ item.date }}</p>
+        </ng-container>
+    </ng-container>
+</div>

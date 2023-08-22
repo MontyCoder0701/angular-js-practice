@@ -1,1 +1,8 @@
-
+.todo-container {
+    position : absolute;
+    top: 18%;
+    left: 60%;
+    max-width: 330px;
+    padding: 1rem;
+    color: white;
+}
