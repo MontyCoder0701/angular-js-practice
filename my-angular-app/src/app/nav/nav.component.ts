@@ -19,14 +19,11 @@ export class NavComponent implements OnInit {
     }
 
     logout(): void {
+        const canvas = document.getElementById('canvas3d') as HTMLCanvasElement;
+        canvas.style.display = 'block';
+
         this.http
             .post('http://localhost:3000/api/logout', {})
             .subscribe(() => {});
-
-        const canvas = document.getElementById('canvas3d') as HTMLCanvasElement;
-        const app = new Application(canvas);
-        app.load(
-            'https://prod.spline.design/yKmotiDVrpmvccOU/scene.splinecode',
-        );
     }
 }

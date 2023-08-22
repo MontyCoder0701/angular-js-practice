@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
                 const canvas = document.getElementById(
                     'canvas3d',
                 ) as HTMLCanvasElement;
-                canvas.remove();
+                canvas.style.display = 'none';
             },
             error: (err) => {
                 this.message = `Welcome, Please Log In.`;

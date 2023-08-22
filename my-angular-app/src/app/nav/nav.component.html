@@ -6,7 +6,9 @@
                 <a routerLink="/login" class="button-white">Login</a>
             </ng-container>
             <ng-container *ngIf="authenticated">
-                <a routerLink="/login" class="button-white" (click)="logout()">Logout</a>
+                <a routerLink="/login" class="button-white" (click)="logout()"
+                    >Logout</a
+                >
             </ng-container>
             <ng-container *ngIf="!authenticated">
                 <a routerLink="/register" class="button-white">Register</a>
