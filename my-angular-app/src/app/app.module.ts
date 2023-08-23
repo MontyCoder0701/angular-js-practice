@@ -13,6 +13,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { ForgotComponent } from './pages/forgot/forgot.component';
 import { ResetComponent } from './pages/reset/reset.component';
 import { TodoComponent } from './pages/todo/todo.component';
+import { TodoFormComponent } from './pages/todo-form/todo-form.component';
 
 @NgModule({
     declarations: [
@@ -24,6 +25,7 @@ import { TodoComponent } from './pages/todo/todo.component';
         ForgotComponent,
         ResetComponent,
         TodoComponent,
+        TodoFormComponent,
     ],
     imports: [
         BrowserModule,

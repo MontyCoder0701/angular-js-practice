@@ -1,8 +1,26 @@
 .todo-container {
-    position : absolute;
-    top: 18%;
+    position: absolute;
+    top: 10%;
     left: 60%;
     max-width: 330px;
-    padding: 1rem;
+    padding: 5rem;
     color: white;
+}
+
+.todo-item {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid white;
+}
+
+.add-button {
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: transparent;
+    width: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 1rem;
 }

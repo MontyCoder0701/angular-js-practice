@@ -10,10 +10,10 @@ export class AppComponent implements OnInit {
     title = 'my-angular-app';
 
     ngOnInit(): void {
-        const canvas = document.getElementById('canvas3d') as HTMLCanvasElement;
-        const app = new Application(canvas);
-        app.load(
-            'https://prod.spline.design/yKmotiDVrpmvccOU/scene.splinecode',
-        );
+        // const canvas = document.getElementById('canvas3d') as HTMLCanvasElement;
+        // const app = new Application(canvas);
+        // app.load(
+        //     'https://prod.spline.design/yKmotiDVrpmvccOU/scene.splinecode',
+        // );
     }
 }

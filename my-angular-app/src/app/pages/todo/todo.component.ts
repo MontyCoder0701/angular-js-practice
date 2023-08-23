@@ -14,6 +14,7 @@ export class TodoComponent implements OnInit {
     text = '';
     date = '';
     apiUrl = 'http://localhost:3000/api/todo';
+    showTodoForm = false;
 
     constructor(private http: HttpClient) {}
 
@@ -29,6 +30,25 @@ export class TodoComponent implements OnInit {
         this.http.get(this.apiUrl).subscribe({
             next: (response) => {
                 this.data = response;
+            },
+            error: (err) => {
+                console.log('Error:', err);
+            },
+        });
+    }
+
+    toggleTodoForm() {
+        this.showTodoForm = !this.showTodoForm;
+    }
+
+    onTodoCreated() {
+        this.fetchData();
+    }
+
+    removeItem(id: number) {
+        this.http.delete(`${this.apiUrl}/${id}`).subscribe({
+            next: () => {
+                this.fetchData();
             },
             error: (err) => {
                 console.log('Error:', err);

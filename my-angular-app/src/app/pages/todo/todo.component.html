@@ -1,9 +1,14 @@
+<app-todo-form *ngIf="showTodoForm" (todoCreated)="fetchData()"></app-todo-form>
 <div class="todo-container">
-    <ng-container *ngFor="let item of data">
-        <ng-container *ngIf="authenticated">
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.text }}</p>
-            <p>{{ item.date }}</p>
+    <ng-container *ngIf="authenticated">
+        <div class="add-button" (click)="toggleTodoForm()">+</div>
+        <ng-container *ngFor="let item of data">
+            <div class="todo-item">
+                <div class="add-button" (click)="removeItem(item.id)">-</div>
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.text }}</p>
+                <p>{{ item.date }}</p>
+            </div>
         </ng-container>
     </ng-container>
 </div>

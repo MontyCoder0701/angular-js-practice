@@ -1,0 +1,16 @@
+<form class="todo-input" [formGroup]="form" (submit)="submit()">
+    <h1>Enter your Todo</h1>
+    <input
+        formControlName="title"
+        class="form-control"
+        placeholder="Title"
+        required
+    />
+    <input
+        formControlName="text"
+        class="form-control"
+        placeholder="Text"
+        required
+    />
+    <button class="submit-button" type="submit">Submit</button>
+</form>
