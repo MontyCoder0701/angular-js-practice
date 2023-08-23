@@ -1,7 +1,19 @@
 <form class="form-signin" [formGroup]="form" (submit)="submit()">
     <h1 class="form-title">Login Here</h1>
-    <input formControlName="email" type="email" class="form-control" placeholder="name@example.com" required>
-    <input formControlName="password" type="password" class="form-control" placeholder="Password" required>
+    <input
+        formControlName="email"
+        type="email"
+        class="form-control"
+        placeholder="name@example.com"
+        required
+    />
+    <input
+        formControlName="password"
+        type="password"
+        class="form-control"
+        placeholder="Password"
+        required
+    />
     <a routerLink="/forgot" class="form-link">Forgot Password</a>
-    <button class="submit-button" type="submit">Submit</button>
+    <app-submit-button></app-submit-button>
 </form>

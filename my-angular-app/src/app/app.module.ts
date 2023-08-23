@@ -14,6 +14,7 @@ import { ForgotComponent } from './pages/forgot/forgot.component';
 import { ResetComponent } from './pages/reset/reset.component';
 import { TodoComponent } from './pages/todo/todo.component';
 import { TodoFormComponent } from './pages/todo-form/todo-form.component';
+import { SubmitButtonComponent } from './common/submit-button/submit-button.component';
 
 @NgModule({
     declarations: [
@@ -26,6 +27,7 @@ import { TodoFormComponent } from './pages/todo-form/todo-form.component';
         ResetComponent,
         TodoComponent,
         TodoFormComponent,
+        SubmitButtonComponent,
     ],
     imports: [
         BrowserModule,

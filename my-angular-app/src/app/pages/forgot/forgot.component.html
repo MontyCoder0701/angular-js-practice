@@ -1,9 +1,15 @@
 <form class="form-signin" [formGroup]="form" (submit)="submit()">
-    <div *ngIf="cls" class="alert alert-{{cls}}" role="alert">
-        {{message}}
+    <div *ngIf="cls" class="alert alert-{{ cls }}" role="alert">
+        {{ message }}
     </div>
 
     <h1 class="form-title">Send Email to Reset</h1>
-    <input formControlName="email" type="email" class="form-control" placeholder="name@example.com" required>
-    <button class="submit-button" type="submit">Submit</button>
+    <input
+        formControlName="email"
+        type="email"
+        class="form-control"
+        placeholder="name@example.com"
+        required
+    />
+    <app-submit-button></app-submit-button>
 </form>
